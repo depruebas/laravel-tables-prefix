@@ -11,7 +11,7 @@ class CreateProductsTableRaw extends Migration
     public function up(): void
     {
         DB::statement("
-            CREATE TABLE products (
+            CREATE TABLE products_raw (
                 id BIGINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(255) NOT NULL,
                 price DECIMAL(8,2) NOT NULL,
@@ -26,6 +26,6 @@ class CreateProductsTableRaw extends Migration
      */
     public function down(): void
     {
-        DB::statement("DROP TABLE IF EXISTS products");
+        DB::statement("DROP TABLE IF EXISTS products_raw");
     }
 }
