@@ -33,6 +33,7 @@ class ListCustomers extends Command
         $customers = DB::table('customer')
             ->select('customer_id', 'first_name', 'last_name', 'email', 'active')
             ->get();
+        print_r( $customers);
 
         # Descomentar para probar Eloquient utilizando el modelo con conexion especifica
         // $customers = Customer::select('customer_id', 'first_name', 'last_name', 'email', 'active')->get();
